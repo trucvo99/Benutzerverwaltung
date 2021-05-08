@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Benutzername ist existiert</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <style>
+            h1 {
+                color: plum;
+                font-family: sans-serif;
+            }
+
+            p {
+                font-family: sans-serif;
+            }
+
+            a {
+                font-family: sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <h1> FEHLER </h1>
+        <p> Der Benutzername <%= namehinzufuegen %> ist schon existiert. </p>
+        <p> Bitte wählen Sie anderen Benutzername. </p>
+        <a href="/benutzertabelle">Zur Benutzerdaten</a><i class="material-icons">exit_to_app</i><br><br>
+        <a href="/login">Login</a><i class="material-icons">exit_to_app</i>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Benutzertabelle</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <style>
+            h1 {
+                color: plum;
+                font-family: sans-serif;
+            }
+
+            a {
+                font-family: sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>BENUTZERDATEN</h1>
+        <table border="1">
+            <% for (var i = 0; i < benutzerdaten.length; i++) { %>
+                <tr>
+                    <td> <%= benutzerdaten[i].id %> </td>
+                    <td> <%= benutzerdaten[i].benutzername %> </td>
+                    <td> <%= benutzerdaten[i].passwort %> </td>
+                    <td>
+                        <form action="/delete/<%= benutzerdaten[i].id %>" method="POST">
+                            <button type="sumbit">Löschen</button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="/update/<%= benutzerdaten[i].id %>" method="POST">
+                            <button type="sumbit">Daten-Update</button>
+                        </form>
+                    </td>
+                </tr>
+            <% } %>
+        </table>
+        <br><br>
+        <a href="/hinzufuegen">Benutzer-Hinzufügen</a><i class="material-icons">exit_to_app</i><br><br>
+        <a href="/login">Login</a><i class="material-icons">exit_to_app</i>
+    </body>
+</html>
